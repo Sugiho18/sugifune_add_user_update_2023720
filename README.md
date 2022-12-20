@@ -18,9 +18,9 @@
 
 1. `config/db.php`をローカル環境に合わせて変更する。
 
-1. コンソール（PowerShell やコマンドプロンプト等）を使用し、PHP コマンドで`php ./bin/setup.php`を実行する。
+1. コンソール（PowerShell やコマンドプロンプト等）を使用し、`composer install`コマンドを実行する。(ローカル環境に Composer がインストールされていない場合は[インストール](https://weblabo.oscasierra.net/php-composer-windows-install/)する)
 
-1. コンソールを使用し、`composer install`コマンドを実行する。(ローカル環境に Composer がインストールされていない場合は[インストール](https://weblabo.oscasierra.net/php-composer-windows-install/)する)
+1. コンソール（PowerShell やコマンドプロンプト等）を使用し、PHP コマンドで`php ./bin/setup.php`を実行する。
 
 1. `public_html`をドキュメントルートに設定する。
 

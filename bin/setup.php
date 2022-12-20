@@ -13,21 +13,19 @@ require_once  ROOT_DIR . '/app/Models/DB.php';
 // SQLファイル格納フォルダ
 define('SQL_DIR', ROOT_DIR . '/sql');
 
-$dbh = DB::getConnection();
-
 try {
-    $dbh->beginTransaction();
+    DB::begin();
     foreach (scandir(SQL_DIR) as $filename) {
         $fullpath = SQL_DIR . '/' . $filename;
         if (is_file($fullpath)) {
             $sql = file_get_contents($fullpath);
-            $dbh->query($sql);
+            DB::execute($sql);
             echo 'success: ' . $filename . PHP_EOL;
         }
     }
-    $dbh->commit();
+    DB::commit();
 } catch (Exception $e) {
-    $dbh->rollBack();
+    DB::rollback();
     echo 'error: ' . $filename . PHP_EOL;
     echo $e->getMessage();
 }
