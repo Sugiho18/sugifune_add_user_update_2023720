@@ -25,6 +25,9 @@ class UserController extends Controller
         // NOTE: アカウント登録、登録確認、登録完了、ログイン画面はログイン前のみ、
         // アカウント更新画面はログイン後のみアクセス可能なため、
         // Auth::guest()またはAuth::guard()は各メソッドで実行。
+    
+    
+    
     }
 
     /**
@@ -135,7 +138,7 @@ class UserController extends Controller
         if ($validation->hasError()) {
             // エラーがあった場合、エラー内容を保存して登録画面にリダイレクト
             Session::set('form_errors', $validation->getErrors());
-            $this->redirect('/user/register.php');
+            $this->redirect('../user/register.php');
         }
 
         return $data;
@@ -163,7 +166,7 @@ class UserController extends Controller
             // エラーがあった場合、エラー内容を保存して登録画面にリダイレクト
             Session::set('form_data.user.register', $data);
             Session::set('form_errors', $validation->getErrors());
-            $this->redirect('/user/register.php');
+            $this->redirect('../user/register.php');
         }
 
         // DB登録
