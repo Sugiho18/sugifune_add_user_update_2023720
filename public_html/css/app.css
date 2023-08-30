@@ -1,0 +1,14 @@
+input#error {
+    border-radius: 0.25rem;
+    padding: 0.2rem 0.75rem;
+    color: white;
+    background-color: rgb(255, 22, 22);
+    border: 1px solid transparent;
+}
+input#update {    
+    border-radius: 0.25rem;
+    padding: 0.2rem 0.75rem;
+    color: white;
+    background-color: rgb(24, 191, 144);
+    border: 1px solid transparent;
+}

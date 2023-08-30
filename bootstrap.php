@@ -38,18 +38,5 @@ if (array_search(Request::getCurrentUri(), [
     // 入力内容が残っているため削除
     Session::remove('form_data.user.register');
 }
-// function dbconnect(){
-//     $db = new mysqli('localhost:3306', 'root', '', 'min_bbs');
-//     if (!$db) {
-//         die($db->error);
-//     }
-
-//     return $db;
-// }
-//echo htmlspecialchars($form['name'], ENT_QUOTES);関数化
-function h($value)
-{
-    return htmlspecialchars($value, ENT_QUOTES);
-}
 
 ?>

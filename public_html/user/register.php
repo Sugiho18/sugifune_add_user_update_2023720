@@ -21,7 +21,6 @@ $title = 'アカウント登録';
 
 <head>
     <?php include HTML_DIR . '/components/head.php' ?>
-
 </head>
 
 <body class="bg-light">

@@ -16,13 +16,16 @@ $current_uri = Request::getCurrentUri();
     </div>
     <ul class="nav nav-pills flex-column mb-auto" id="side_menu_list">
         <li class="nav-item">
-            <a href="/" class="nav-link <?= $current_uri === '/' || $current_uri === '/index.php' ? $active : $inactive ?>" aria-current="page">
+            <a href="/"
+                class="nav-link <?= $current_uri === '/' || $current_uri === '/index.php' ? $active : $inactive ?>"
+                aria-current="page">
                 <i class="fa-solid fa-gauge fs-5 text-primary"></i>
                 <span class="ms-2">ダッシュボード</span>
             </a>
         </li>
         <li>
-            <a href="/project" class="nav-link <?= strpos($current_uri, '/project') === 0 || strpos($current_uri, '/task') === 0 ? $active : $inactive ?>">
+            <a href="/project"
+                class="nav-link <?= strpos($current_uri, '/project') === 0 || strpos($current_uri, '/task') === 0 ? $active : $inactive ?>">
                 <i class="fa-solid fa-bars-progress fs-5 text-primary"></i>
                 <span class="ms-2">プロジェクト</span>
             </a>
@@ -40,9 +43,17 @@ $current_uri = Request::getCurrentUri();
             </a>
         </li>
         <li>
+            <a href="/user/usersetting.php"
+                class="nav-link <?= strpos($current_uri, '/user') === 0 ? $active : $inactive ?>">
+                <i class="fa-solid fa-user-circle fs-5 text-primary"></i>
+                <span class="ms-2">マイアカウント</span>
+            </a>
+        </li>
+        <li>
             <form name="user.logout" method="POST" action="/user/logout.php">
                 <input type="hidden" name="_token" value="<?= Request::generateCsrfToken('user.logout') ?>">
-                <a href="javascript:void(0);" class="nav-link link-dark" onclick="document.forms['user.logout'].submit()">
+                <a href="javascript:void(0);" class="nav-link link-dark"
+                    onclick="document.forms['user.logout'].submit()">
                     <i class="fa-solid fa-right-from-bracket fs-5 text-primary"></i>
                     <span class="ms-2">ログアウト</span>
                 </a>

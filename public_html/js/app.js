@@ -22,3 +22,7 @@ window.onload = () => {
     toggle_menu();
   }
 };
+//ボタンを押したらメッセージが消える処理
+function closeMessage() {
+  document.getElementById("message").style.display = "none";
+};
